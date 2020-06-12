@@ -1,14 +1,16 @@
 <template>
   <div id="app">
-    ezezf <HelloWorld/>
+    <Cpt count="0"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld'
+import Cpt from './components/Cpt'
 
 export default {
-  HelloWorld
+  components: {
+    Cpt
+  }
 }
 </script>
 <style lang="scss">
