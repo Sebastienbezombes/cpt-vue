@@ -1,8 +1,10 @@
 <template>
 <div>
     <h1>{{ count }}</h1>
+    <button @click="divValue()">:</button>
     <button @click="lessValue()">-</button>
     <button @click="addValue()">+</button>
+    <button @click="multValue()">x</button>
 </div>
 </template>
 
@@ -14,18 +16,24 @@ export default {
         count: Number
     },
     methods: {
+        divValue() {
+            this.count/=2;
+        },
         lessValue() {
-            this.count = this.count-=1;
+            this.count--;
         },
         addValue() {
-            this.count = this.count+=1;
-        }
+            this.count++;
+        },
+        multValue() {
+            this.count*=2;
+        },
     }
 }
 </script>
 
 <style scoped>
-    button:nth-of-type(1) {
+    button:not(:last-child) {
         margin-right: 16px;
     }
 </style>
